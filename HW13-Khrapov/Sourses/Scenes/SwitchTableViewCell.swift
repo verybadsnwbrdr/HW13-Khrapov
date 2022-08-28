@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  SwitchTableViewCell.swift
 //  HW13-Khrapov
 //
 //  Created by Anton on 28.08.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class TableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell {
     
     // MARK: - Elements
     

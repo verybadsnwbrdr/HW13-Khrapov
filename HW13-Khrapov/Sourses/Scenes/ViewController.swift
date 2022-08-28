@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     private lazy var tableWiew: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "switchCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "textCell")
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "def")
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: "switchCell")
+        tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "textCell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "def")
         tableView.dataSource = self
         return tableView
     }()

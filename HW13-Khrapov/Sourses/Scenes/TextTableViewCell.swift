@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  TextTableViewCell.swift
 //  HW13-Khrapov
 //
 //  Created by Anton on 28.08.2022.
@@ -8,8 +8,8 @@
 import UIKit
 import SnapKit
 
-class TableViewCell: UITableViewCell {
-    
+class TextTableViewCell: UITableViewCell {
+
     // MARK: - Elements
     
     var cell: CellModels? {

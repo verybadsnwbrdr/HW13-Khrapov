@@ -17,6 +17,8 @@
 		3AF8344428BB54250019BA30 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344328BB54250019BA30 /* TableViewCell.swift */; };
 		3AF8344628BB545E0019BA30 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344528BB545E0019BA30 /* Extensions.swift */; };
 		3AF8344828BB548B0019BA30 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344728BB548B0019BA30 /* Model.swift */; };
+		3AF8344A28BBC2340019BA30 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */; };
+		3AF8344C28BBC27B0019BA30 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		3AF8344328BB54250019BA30 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3AF8344528BB545E0019BA30 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3AF8344728BB548B0019BA30 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +122,12 @@
 		3AF8343F28BB4D770019BA30 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3AF8344328BB54250019BA30 /* TableViewCell.swift */,
 				3AF8342A28BB4CF10019BA30 /* ViewController.swift */,
 				3AF8344528BB545E0019BA30 /* Extensions.swift */,
 				3AF8344728BB548B0019BA30 /* Model.swift */,
+				3AF8344328BB54250019BA30 /* TableViewCell.swift */,
+				3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */,
+				3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -204,6 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF8344628BB545E0019BA30 /* Extensions.swift in Sources */,
+				3AF8344C28BBC27B0019BA30 /* SwitchTableViewCell.swift in Sources */,
+				3AF8344A28BBC2340019BA30 /* TextTableViewCell.swift in Sources */,
 				3AF8342B28BB4CF10019BA30 /* ViewController.swift in Sources */,
 				3AF8344428BB54250019BA30 /* TableViewCell.swift in Sources */,
 				3AF8344828BB548B0019BA30 /* Model.swift in Sources */,
