@@ -13,6 +13,7 @@
 		3AF8342E28BB4CF10019BA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8342C28BB4CF10019BA30 /* Main.storyboard */; };
 		3AF8343028BB4CF80019BA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8342F28BB4CF80019BA30 /* Assets.xcassets */; };
 		3AF8343328BB4CF80019BA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8343128BB4CF80019BA30 /* LaunchScreen.storyboard */; };
+		3AF8344228BB512C0019BA30 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF8344128BB512C0019BA30 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF8344228BB512C0019BA30 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +58,63 @@
 		3AF8342528BB4CF10019BA30 /* HW13-Khrapov */ = {
 			isa = PBXGroup;
 			children = (
-				3AF8342628BB4CF10019BA30 /* AppDelegate.swift */,
-				3AF8342828BB4CF10019BA30 /* SceneDelegate.swift */,
-				3AF8342A28BB4CF10019BA30 /* ViewController.swift */,
-				3AF8342C28BB4CF10019BA30 /* Main.storyboard */,
-				3AF8342F28BB4CF80019BA30 /* Assets.xcassets */,
-				3AF8343128BB4CF80019BA30 /* LaunchScreen.storyboard */,
-				3AF8343428BB4CF80019BA30 /* Info.plist */,
+				3AF8343D28BB4D690019BA30 /* Sourses */,
+				3AF8343A28BB4D190019BA30 /* Resourses */,
 			);
 			path = "HW13-Khrapov";
+			sourceTree = "<group>";
+		};
+		3AF8343A28BB4D190019BA30 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				3AF8342F28BB4CF80019BA30 /* Assets.xcassets */,
+				3AF8343C28BB4D5D0019BA30 /* Storyboards */,
+				3AF8343B28BB4D550019BA30 /* Configs */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		3AF8343B28BB4D550019BA30 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				3AF8343428BB4CF80019BA30 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		3AF8343C28BB4D5D0019BA30 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3AF8342C28BB4CF10019BA30 /* Main.storyboard */,
+				3AF8343128BB4CF80019BA30 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3AF8343D28BB4D690019BA30 /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				3AF8343F28BB4D770019BA30 /* Scenes */,
+				3AF8343E28BB4D710019BA30 /* App */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
+		3AF8343E28BB4D710019BA30 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3AF8342628BB4CF10019BA30 /* AppDelegate.swift */,
+				3AF8342828BB4CF10019BA30 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3AF8343F28BB4D770019BA30 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3AF8342A28BB4CF10019BA30 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,9 @@
 			dependencies = (
 			);
 			name = "HW13-Khrapov";
+			packageProductDependencies = (
+				3AF8344128BB512C0019BA30 /* SnapKit */,
+			);
 			productName = "HW13-Khrapov";
 			productReference = 3AF8342328BB4CF10019BA30 /* HW13-Khrapov.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 3AF8341A28BB4CF10019BA30;
+			packageReferences = (
+				3AF8344028BB512C0019BA30 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 3AF8342428BB4CF10019BA30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,12 +345,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XPDQ86R58G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW13-Khrapov/Info.plist";
+				INFOPLIST_FILE = "HW13-Khrapov/Resourses/Configs/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +374,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XPDQ86R58G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW13-Khrapov/Info.plist";
+				INFOPLIST_FILE = "HW13-Khrapov/Resourses/Configs/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AF8344028BB512C0019BA30 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AF8344128BB512C0019BA30 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF8344028BB512C0019BA30 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AF8341B28BB4CF10019BA30 /* Project object */;
 }
