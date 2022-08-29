@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell, CustomTableViewCell {
     
     // MARK: - Elements
     
@@ -37,11 +37,11 @@ class TableViewCell: UITableViewCell {
         return text
     }()
     
-    
-    // MARK: - Initialirs
+    // MARK: - Initializers
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        accessoryType = .disclosureIndicator
         setupHierarchy()
         setupLayout()
     }
@@ -49,6 +49,7 @@ class TableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     // MARK: - Setup
     
     private func setupHierarchy() {
@@ -59,16 +60,14 @@ class TableViewCell: UITableViewCell {
     
     private func setupLayout() {
         backImageView.snp.makeConstraints { make in
-//            make.centerY.equalTo(contentView.snp.centerY)
-            make.top.bottom.equalTo(contentView).offset(8)
-            make.left.equalTo(contentView).offset(15)
-            
+            make.centerY.equalTo(snp.centerY)
+            make.left.equalTo(snp.left).offset(15)
             make.width.height.equalTo(28)
         }
         
         image.snp.makeConstraints { make in
             make.center.equalTo(backImageView)
-            make.width.height.equalTo(20)
+            make.width.height.equalTo(21)
         }
         
         text.snp.makeConstraints { make in

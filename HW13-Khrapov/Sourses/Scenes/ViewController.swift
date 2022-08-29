@@ -15,13 +15,17 @@ class ViewController: UIViewController {
     var cells: [[CellModels]]?
     
     private lazy var tableWiew: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: "switchCell")
-        tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "textCell")
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: "withSwitch")
+        tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "withText")
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "def")
+        
         tableView.dataSource = self
         return tableView
     }()
+
+    // MARK: - Initializers
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +49,6 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
     
 }
 

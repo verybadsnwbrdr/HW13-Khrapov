@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class SwitchTableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
     
     // MARK: - Elements
     
@@ -37,8 +37,15 @@ class SwitchTableViewCell: UITableViewCell {
         return text
     }()
     
+    private lazy var switchElement: UISwitch = {
+        let switchElement = UISwitch(frame: .zero)
+        switchElement.isOn = true
+        switchElement.setOn(true, animated: true)
+        switchElement.addTarget(self, action: #selector(switched), for: .valueChanged)
+        return switchElement
+    }()
     
-    // MARK: - Initialirs
+    // MARK: - Initializers
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -49,31 +56,42 @@ class SwitchTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     // MARK: - Setup
     
     private func setupHierarchy() {
         addSubview(backImageView)
         addSubview(image)
         addSubview(text)
+        addSubview(switchElement)
     }
     
     private func setupLayout() {
         backImageView.snp.makeConstraints { make in
-//            make.centerY.equalTo(contentView.snp.centerY)
-            make.top.bottom.equalTo(contentView).offset(8)
-            make.left.equalTo(contentView).offset(15)
-            
+            make.centerY.equalTo(snp.centerY)
+            make.left.equalTo(snp.left).offset(15)
             make.width.height.equalTo(28)
         }
         
         image.snp.makeConstraints { make in
             make.center.equalTo(backImageView)
-            make.width.height.equalTo(20)
+            make.width.height.equalTo(21)
         }
         
         text.snp.makeConstraints { make in
             make.centerY.equalTo(backImageView)
             make.left.equalTo(backImageView.snp.right).offset(15)
         }
+        
+        switchElement.snp.makeConstraints { make in
+            make.centerY.equalTo(text)
+            make.right.equalTo(snp.right).offset(-20)
+        }
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func switched() {
+        
     }
 }

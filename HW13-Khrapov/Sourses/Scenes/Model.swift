@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CellType {
+enum CellType: String {
     case withSwitch
     case withText
     case def
@@ -18,6 +18,7 @@ struct CellModels {
     var image: UIImage
     var imageColor: UIColor
     var name: String
+    var detailTextLabel: String?
 }
 
 extension CellModels {
@@ -29,23 +30,27 @@ extension CellModels {
         CellModels(type: .withText,
                    image: UIImage(systemName: "wifi") ?? UIImage(),
                    imageColor: .systemBlue,
-                   name: "Wi-Fi"),
+                   name: "Wi-Fi",
+                   detailTextLabel: "TP-Link_44"),
          CellModels(type: .withText,
                     image: UIImage(named: "bluetooth") ?? UIImage(),
                     imageColor: .systemBlue,
-                    name: "Bluetooth"),
+                    name: "Bluetooth",
+                    detailTextLabel: "Вкл."),
         CellModels(type: .def,
                    image: UIImage(systemName: "antenna.radiowaves.left.and.right") ?? UIImage(),
                    imageColor: .systemGreen,
                    name: "Сотовая связь"),
-        CellModels(type: .def,
+        CellModels(type: .withText,
                    image: UIImage(systemName: "personalhotspot") ?? UIImage(),
                    imageColor: .systemGreen,
-                   name: "Режим модема"),
-         CellModels(type: .withSwitch,
+                   name: "Режим модема",
+                   detailTextLabel: "Выкл."),
+         CellModels(type: .withText,
                     image: UIImage(named: "VPN") ?? UIImage(),
                     imageColor: .systemBlue,
-                    name: "VPN")],
+                    name: "VPN",
+                    detailTextLabel: "Не подключено")],
         
         [CellModels(type: .def,
                     image: UIImage(systemName: "app.badge") ?? UIImage(),
