@@ -19,6 +19,7 @@
 		3AF8344828BB548B0019BA30 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344728BB548B0019BA30 /* Model.swift */; };
 		3AF8344A28BBC2340019BA30 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */; };
 		3AF8344C28BBC27B0019BA30 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */; };
+		3AF8345028BE58F10019BA30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344F28BE58F10019BA30 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3AF8344728BB548B0019BA30 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		3AF8344F28BE58F10019BA30 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3AF8342A28BB4CF10019BA30 /* ViewController.swift */,
+				3AF8344F28BE58F10019BA30 /* DetailViewController.swift */,
 				3AF8344528BB545E0019BA30 /* ProtocolsAndExtensions.swift */,
 				3AF8344728BB548B0019BA30 /* Model.swift */,
 				3AF8344328BB54250019BA30 /* TableViewCell.swift */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF8345028BE58F10019BA30 /* DetailViewController.swift in Sources */,
 				3AF8344628BB545E0019BA30 /* ProtocolsAndExtensions.swift in Sources */,
 				3AF8344C28BBC27B0019BA30 /* SwitchTableViewCell.swift in Sources */,
 				3AF8344A28BBC2340019BA30 /* TextTableViewCell.swift in Sources */,

@@ -38,9 +38,9 @@ class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
     }()
     
     private lazy var switchElement: UISwitch = {
-        let switchElement = UISwitch(frame: .zero)
+        let switchElement = UISwitch()
         switchElement.isOn = true
-        switchElement.setOn(true, animated: true)
+        switchElement.setOn(false, animated: true)
         switchElement.addTarget(self, action: #selector(switched), for: .valueChanged)
         return switchElement
     }()

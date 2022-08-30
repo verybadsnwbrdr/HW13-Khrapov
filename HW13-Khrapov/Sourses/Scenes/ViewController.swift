@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "def")
         
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
 
@@ -29,14 +30,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         cells = CellModels.cells
-        view.backgroundColor = .white
-        title = "Настройки"
         setupHierarchy()
         setupLayout()
     }
 
     // MARK: - Setup
+    
+    private func setupView() {
+        view.backgroundColor = .white
+        title = "Настройки"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
     private func setupHierarchy() {
         view.addSubview(tableWiew)
