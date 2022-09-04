@@ -10,13 +10,15 @@ import SnapKit
 
 class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
     
+    static let identifier = CellType.switchType.rawValue
+    
     // MARK: - Elements
     
-    var cell: CellModels? {
+    var cellModel: CellModels? {
         didSet {
-            image.image = cell?.image
-            text.text = cell?.name
-            backImageView.backgroundColor = cell?.imageColor
+            image.image = cellModel?.image
+            text.text = cellModel?.name
+            backImageView.backgroundColor = cellModel?.imageColor
         }
     }
     
@@ -39,7 +41,6 @@ class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
     
     private lazy var switchElement: UISwitch = {
         let switchElement = UISwitch()
-        switchElement.isOn = true
         switchElement.setOn(false, animated: true)
         switchElement.addTarget(self, action: #selector(switched), for: .valueChanged)
         return switchElement
@@ -49,6 +50,7 @@ class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        accessoryView = switchElement
         setupHierarchy()
         setupLayout()
     }
@@ -63,7 +65,6 @@ class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
         addSubview(backImageView)
         addSubview(image)
         addSubview(text)
-        addSubview(switchElement)
     }
     
     private func setupLayout() {
@@ -81,11 +82,6 @@ class SwitchTableViewCell: UITableViewCell, CustomTableViewCell {
         text.snp.makeConstraints { make in
             make.centerY.equalTo(backImageView)
             make.left.equalTo(backImageView.snp.right).offset(15)
-        }
-        
-        switchElement.snp.makeConstraints { make in
-            make.centerY.equalTo(text)
-            make.right.equalTo(snp.right).offset(-20)
         }
     }
     

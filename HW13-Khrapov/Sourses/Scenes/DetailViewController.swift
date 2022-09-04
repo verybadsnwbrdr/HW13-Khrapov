@@ -12,11 +12,11 @@ class DetailViewController: UIViewController {
 
     // MARK: - Elements
     
-    var cell: CellModels? {
+    var cellModel: CellModels? {
         didSet {
-            cellBackgroundImage.backgroundColor = cell?.imageColor
-            cellImage.image = cell?.image
-            cellLabel.text = cell?.name
+            cellBackgroundImage.backgroundColor = cellModel?.imageColor
+            cellImage.image = cellModel?.image
+            cellLabel.text = cellModel?.name
         }
     }
     

@@ -15,7 +15,7 @@
 		3AF8343328BB4CF80019BA30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF8343128BB4CF80019BA30 /* LaunchScreen.storyboard */; };
 		3AF8344228BB512C0019BA30 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF8344128BB512C0019BA30 /* SnapKit */; };
 		3AF8344428BB54250019BA30 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344328BB54250019BA30 /* TableViewCell.swift */; };
-		3AF8344628BB545E0019BA30 /* ProtocolsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344528BB545E0019BA30 /* ProtocolsAndExtensions.swift */; };
+		3AF8344628BB545E0019BA30 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344528BB545E0019BA30 /* Protocol.swift */; };
 		3AF8344828BB548B0019BA30 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344728BB548B0019BA30 /* Model.swift */; };
 		3AF8344A28BBC2340019BA30 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */; };
 		3AF8344C28BBC27B0019BA30 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */; };
@@ -32,7 +32,7 @@
 		3AF8343228BB4CF80019BA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AF8343428BB4CF80019BA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF8344328BB54250019BA30 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		3AF8344528BB545E0019BA30 /* ProtocolsAndExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsAndExtensions.swift; sourceTree = "<group>"; };
+		3AF8344528BB545E0019BA30 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		3AF8344728BB548B0019BA30 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,13 +126,29 @@
 			children = (
 				3AF8342A28BB4CF10019BA30 /* ViewController.swift */,
 				3AF8344F28BE58F10019BA30 /* DetailViewController.swift */,
-				3AF8344528BB545E0019BA30 /* ProtocolsAndExtensions.swift */,
+				3AF8344528BB545E0019BA30 /* Protocol.swift */,
+				3AF8348D28C4FCA60019BA30 /* Cells */,
+				3AF8348C28C4FC9C0019BA30 /* Model */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3AF8348C28C4FC9C0019BA30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				3AF8344728BB548B0019BA30 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AF8348D28C4FCA60019BA30 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				3AF8344328BB54250019BA30 /* TableViewCell.swift */,
 				3AF8344928BBC2340019BA30 /* TextTableViewCell.swift */,
 				3AF8344B28BBC27B0019BA30 /* SwitchTableViewCell.swift */,
 			);
-			path = Scenes;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF8345028BE58F10019BA30 /* DetailViewController.swift in Sources */,
-				3AF8344628BB545E0019BA30 /* ProtocolsAndExtensions.swift in Sources */,
+				3AF8344628BB545E0019BA30 /* Protocol.swift in Sources */,
 				3AF8344C28BBC27B0019BA30 /* SwitchTableViewCell.swift in Sources */,
 				3AF8344A28BBC2340019BA30 /* TextTableViewCell.swift in Sources */,
 				3AF8342B28BB4CF10019BA30 /* ViewController.swift in Sources */,
