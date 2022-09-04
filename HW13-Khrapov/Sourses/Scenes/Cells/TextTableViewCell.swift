@@ -9,15 +9,17 @@ import UIKit
 import SnapKit
 
 class TextTableViewCell: UITableViewCell, CustomTableViewCell {
+    
+    static let identifier = CellType.textType.rawValue
 
     // MARK: - Elements
     
-    var cell: CellModels? {
+    var cellModel: CellModels? {
         didSet {
-            image.image = cell?.image
-            text.text = cell?.name
-            backImageView.backgroundColor = cell?.imageColor
-            self.detailTextLabel?.text = cell?.detailTextLabel
+            image.image = cellModel?.image
+            text.text = cellModel?.name
+            backImageView.backgroundColor = cellModel?.imageColor
+            self.detailTextLabel?.text = cellModel?.detailTextLabel
         }
     }
     

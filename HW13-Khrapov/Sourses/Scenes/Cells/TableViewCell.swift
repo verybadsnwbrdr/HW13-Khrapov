@@ -10,13 +10,15 @@ import SnapKit
 
 class TableViewCell: UITableViewCell, CustomTableViewCell {
     
+    static let identifier = CellType.defaultType.rawValue
+    
     // MARK: - Elements
     
-    var cell: CellModels? {
+    var cellModel: CellModels? {
         didSet {
-            image.image = cell?.image
-            text.text = cell?.name
-            backImageView.backgroundColor = cell?.imageColor
+            image.image = cellModel?.image
+            text.text = cellModel?.name
+            backImageView.backgroundColor = cellModel?.imageColor
         }
     }
     

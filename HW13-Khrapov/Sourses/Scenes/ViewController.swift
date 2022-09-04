@@ -12,14 +12,14 @@ class ViewController: UIViewController {
     
     // MARK: - Elements
     
-    var cells: [[CellModels]]?
+    var cells = CellModels.cells
     
     private lazy var tableWiew: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         
-        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: "withSwitch")
-        tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "withText")
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "def")
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
+        tableView.register(TextTableViewCell.self, forCellReuseIdentifier: TextTableViewCell.identifier)
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        cells = CellModels.cells
         setupHierarchy()
         setupLayout()
     }
@@ -53,8 +52,30 @@ class ViewController: UIViewController {
             make.top.bottom.left.right.equalTo(view)
         }
     }
-    
-    // MARK: - Actions
-    
 }
 
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        cells.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cells[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = cells[indexPath.section][indexPath.row]
+        let cellType = model.type.rawValue
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellType, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
+        cell.cellModel = model
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = DetailViewController()
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewController.cellModel = cells[indexPath.section][indexPath.row]
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
